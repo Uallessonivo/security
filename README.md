@@ -21,6 +21,8 @@ This project is a simple example of how to use Spring Security with JWT.
 - Get all users
 - Get user by username
 - Get user by email
+- Update user
+- Delete user
 - Role based authorization
 
 # PostgreSQL and Spring Boot Setup
