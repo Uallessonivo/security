@@ -25,6 +25,10 @@ public class SecurityConfig {
                 .authorizeHttpRequests(request -> request
                                 .requestMatchers("/api/auth/**")
                                 .permitAll()
+                                .requestMatchers("/api/users/update/**")
+                                .hasAnyAuthority("ADMIN")
+                                .requestMatchers("/api/users/delete/**")
+                                .hasAnyAuthority("ADMIN")
                                 .anyRequest()
                                 .authenticated()
                 )
